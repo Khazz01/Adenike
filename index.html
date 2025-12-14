@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #ffeaf4;
+            color: #333;
+            transition: background 0.5s, color 0.5s;
+            text-align: center;
+        }
+
+        /* Dark mode styles */
+        body.dark {
+            background: #1a1a1a;
+            color: #f2f2f2;
+        }
+        body.dark header,
+        body.dark footer {
+            background: #333;
+        }
+
+        header {
+            padding: 40px 20px;
+            background: #ffb6d9;
+            color: white;
+            transition: background 0.5s;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            font-size: 1.3em;
+        }
+
+        section {
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Love Letter */
+        .letter {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            line-height: 1.7;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1.2em;
+            transition: background 0.5s;
+        }
+
+        body.dark .letter {
+            background: #2c2c2c;
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+        }
+
+        /* Dark mode toggle button */
+        #darkToggle {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #ff7fbf;
+            color: white;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+        #darkToggle:hover {
+            background: #ff5fae;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #ffb6d9;
+            color: white;
+            transition: background 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bgm" src="music.mp3" autoplay loop></audio>
+
+    <!-- Dark Mode Button -->
+    <button id="darkToggle">Dark Mode 🌙</button>
+
+    <header>
+        <h1>Happy Birthday, My Love! ❤️</h1>
+        <p class="subtitle">You make my world brighter every single day 🌸</p>
+    </header>
+
+    <!-- Video Section -->
+    <section>
+        <h2>🎥 Kemi</h2>
+        <div class="videos">
+            <video controls>
+                <source src="images/nike3.mp4" type="video/mp4">
+            </video>
+
+            <video controls>
+                <source src="images/nike5.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section>
+        <h2>📸 My Favorite Pictures of U</h2>
+        <div class="gallery">
+            <img src="images/nike2.jpeg" alt="Picture 1">
+            <img src="images/nike4.jpeg" alt="Picture 2">
+        </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section>
+        <h2>💌 A Love Letter for You</h2>
+        <div class="letter">
+            My love,<br><br>
+            Today is all about celebrating you—the most beautiful, kind, and amazing person I’ve ever known.
+            Every moment with you feels like a gift, and every day I get to love you is a blessing I’ll never take for granted.<br><br>
+            You make me laugh, you make me better, and you make my heart feel like home.
+            I hope this little page makes you smile, because you deserve all the happiness in the world.<br><br>
+            Happy Birthday, sweetheart.
+            I love you endlessly. ❤️
+        </div>
+    </section>
+
+    <footer>
+        <h3>Forever yours 💕</h3>
+    </footer>
+
+    <!-- Script for dark mode toggle -->
+    <script>
+        const toggle = document.getElementById("darkToggle");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            toggle.innerText =
+                document.body.classList.contains("dark")
+                ? "Light Mode ☀️"
+                : "Dark Mode 🌙";
+        });
+    </script>
+
+</body>
+</html>
